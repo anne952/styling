@@ -10,7 +10,6 @@ export default function LoginScreen() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
@@ -21,16 +20,10 @@ export default function LoginScreen() {
     <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <Text style={styles.title}>Connexion</Text>
-       <Input
-        placeholder="Nom de l'enseigne"
+      <Input
+        placeholder="Nom"
         value={username}
         onChangeText={setUsername}
-        style={[styles.input, styles.inputBorder]}
-      />
-      <Input
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
         style={[styles.input, styles.inputBorder]}
       />
       <Input
@@ -41,11 +34,11 @@ export default function LoginScreen() {
         style={[styles.input, styles.inputBorder]}
       />
       <View style={styles.forgotRow}>
-        {/* <TouchableOpacity onPress={() => router.replace("/commun/forgotPassword")}> 
+        <TouchableOpacity onPress={() => router.replace("/commun/forgotPassword")}> 
           <Text style={styles.forgot}>Mot de passe oublié ?</Text>
-        </TouchableOpacity> */}
-        <TouchableOpacity onPress={() => router.replace("/home_screen/login")}> 
-          <Text style={styles.signup}>Se connecter</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => router.replace("/home_screen/choice")}> 
+          <Text style={styles.signup}>S'inscrire</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity onPress={handleLogin} style={styles.button}>

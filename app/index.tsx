@@ -3,20 +3,20 @@ import React, { useEffect } from "react";
 import { Image, View } from "react-native";
 
 export default function SplashScreen() {
-  const router = useRouter();
+    const router = useRouter();
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      router.replace("/commun/faqClient1");
-    }, 1500);
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+       router.replace("/home_screen/onboarding1");
+     }, 2500);
     return () => clearTimeout(timeout);
-  }, [router]);
+    }, [router]);
 
   return (
-    <View className="flex-1 justify-center items-center bg-white">
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "white" }}>
       <Image
-        source={require("../assets/images/splash-icon.png")}
-        style={{ width: 180, height: 180, resizeMode: "contain" }}
+        source={require("../assets/logo/Styling.png")}
+       style={{width: 180 , height: 260, resizeMode: "contain"}}
       />
     </View>
   );
