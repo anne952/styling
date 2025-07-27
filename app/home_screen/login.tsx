@@ -34,7 +34,7 @@ export default function LoginScreen() {
         style={[styles.input, styles.inputBorder]}
       />
       <View style={styles.forgotRow}>
-        <TouchableOpacity onPress={() => router.replace("/commun/forgotPassword")}> 
+        <TouchableOpacity onPress={() => router.replace("/home_screen/forgot-password")}> 
           <Text style={styles.forgot}>Mot de passe oublié ?</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => router.replace("/home_screen/choice")}> 
